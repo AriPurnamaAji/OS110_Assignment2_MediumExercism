@@ -5,11 +5,11 @@
 #### Link Github.io   : https://aripurnamaaji.github.io/OS110_Assignment2_MediumExercism/
 
 #### Daftar problem yang telah saya selesaikan:
-- Hamming
-- Isogram
-- Perfect Number
-- Pythagorean Triplet
-- Triangle
+- Hamming               [Hamming](https://exercism.io/tracks/rust/exercises/hamming/solutions/37775f1c43b946629268d01f3f6301bb)
+- Isogram               [Isogram](https://exercism.io/tracks/rust/exercises/isogram/solutions/51b8150c54a24ef7b6401b2946636bcb)
+- Perfect Number        [Perfect Number](https://exercism.io/tracks/rust/exercises/perfect-numbers/solutions/b68dd705d8a5493a93106b8689615616)
+- Pythagorean Triplet   [Pythagorean Triplet](https://exercism.io/tracks/rust/exercises/pythagorean-triplet/solutions/38d433317fc340c4b87b45a425f2f8f5)
+- Triangle              [Triangle](https://exercism.io/tracks/rust/exercises/triangle/solutions/0ec26e5715db4066a0148374471adccf)
 
 Esai ini dibuat untuk memenuhi tugas mata kuliah Sistem Operasi di semester 110, yang membahas salah satu pendekatan penyelsaian masalah pada **Rust medium exercism**. Pada kesempatan kali ini saya akan membahas bagaimana solusi saya dalam menyelasaikan **Perfect-Number problem**.
 
