@@ -37,3 +37,4 @@ pub fn classify(num: u64) -> Option<Classification> {
 }
 
 //Original Problem Link : https://exercism.io/tracks/rust/exercises/perfect-numbers/solutions/b68dd705d8a5493a93106b8689615616
+//Reference : https://mon26harista.wordpress.com/2012/05/04/perfect-number-bilangan-sempurna/
