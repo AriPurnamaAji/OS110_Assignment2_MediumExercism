@@ -18,7 +18,7 @@ Problem ini meminta kita untuk menentukan apakah bilangan sempurna, berlimpah, a
 1. **Perfect (Sempurna)**, jumlah alikuot = bilangan. Contoh : 6 adalah bilangan sempurna karena (1 + 2 + 3) = 6, contoh lain 28 juga adalah bilangan sempurna karena (1 + 2 + 4 + 7 + 14) = 28.
 2. **Abundant (Berlimpah)**, jumlah alikuot > bilangan. Contoh : 12 adalah bilangan yang berlimpah karena (1 + 2 + 3 + 4 + 6) = 16,
 contoh lain 24 juga adalah bilangan yang berlimpah karena (1 + 2 + 3 + 4 + 6 + 8 + 12) = 36.
-3. **Deficient (Kurang)**, jumlah alikuot < bilangan. Contoh : 8 adalah bilangan yang kurang karena (1 + 2 + 4) = 7.
+3. **Deficient (Kurang)**, jumlah alikuot < bilangan. Contoh : 8 adalah bilangan yang kurang karena (1 + 2 + 4) = 7. Dan semua bilangan prima merupakan bilangan yang kurang.
 
 ## My Solution
 Dalam menyelsaikan problem ini, pertama saya memikirkan terlebih dahulu bagaimana saya mendapatkan faktor-faktor dari suatu bilangan sempurna yang nantinya akan dijumlah, yang disebut juga dengan **jumlah alikuot**. Kita harus pahami betul definisi dari bilangan sempurna agar dapat mengetahui faktor-faktornya tersebut.
