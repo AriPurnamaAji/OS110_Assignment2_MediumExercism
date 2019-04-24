@@ -2,6 +2,7 @@
 
 #### Nama             : Ari Purnama Aji
 #### Username Exercism: AriPurnamaAji
+#### Link Github.io   : https://aripurnamaaji.github.io/OS110_Assignment2_MediumExercism/
 
 #### Daftar problem yang telah saya selesaikan:
 - Hamming
