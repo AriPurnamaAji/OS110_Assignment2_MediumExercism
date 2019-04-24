@@ -15,9 +15,10 @@ Esai ini dibuat untuk memenuhi tugas mata kuliah Sistem Operasi di semester 110,
 # Perfect Number
 ## The Problem
 Problem ini meminta kita untuk menentukan apakah bilangan sempurna, berlimpah, atau kurang berdasarkan skema klasifikasi Nicomachus (60 - 120 M) untuk bilangan asli.
-1. **Perfect (Sempurna)**, jumlah alikuot = bilangan.
-2. **Abundant (Berlimpah)**, jumlah alikuot > bilangan.
-3. **Deficient (Kurang)**, jumlah alikuot < bilangan.
+1. **Perfect (Sempurna)**, jumlah alikuot = bilangan. Contoh : 6 adalah bilangan sempurna karena (1 + 2 + 3) = 6, contoh lain 28 juga adalah bilangan sempurna karena (1 + 2 + 4 + 7 + 14) = 28.
+2. **Abundant (Berlimpah)**, jumlah alikuot > bilangan. Contoh : 12 adalah bilangan yang berlimpah karena (1 + 2 + 3 + 4 + 6) = 16,
+contoh lain 24 juga adalah bilangan yang berlimpah karena (1 + 2 + 3 + 4 + 6 + 8 + 12) = 36.
+3. **Deficient (Kurang)**, jumlah alikuot < bilangan. Contoh : 8 adalah bilangan yang kurang karena (1 + 2 + 4) = 7.
 
 ## My Solution
 Dalam menyelsaikan problem ini, pertama saya memikirkan terlebih dahulu bagaimana saya mendapatkan faktor-faktor dari suatu bilangan sempurna yang nantinya akan dijumlah, yang disebut juga dengan **jumlah alikuot**. Kita harus pahami betul definisi dari bilangan sempurna agar dapat mengetahui faktor-faktornya tersebut.
@@ -26,7 +27,7 @@ Dalam matematika, bilangan  sempurna adalah bilangan bulat positif yang merupaka
 
 Mulai dari situlah saya dapat memahami bagaimana saya mendapatkan faktor-faktor dari suatu bilangan tersebut. 
 
-### Fungsi Classification
+### Enum Classification
 ```Rust
 #[derive(Debug, PartialEq, Eq)]
 
@@ -37,8 +38,8 @@ pub enum Classification {
 }
 ```
 
-### Penjelasan Fungsi Classification
-Fungsi tersebut merupakan fungsi yang berisi klasifikasi ketetapan nilai untuk menentukan bahwa bilangan tersebut apakah merupakan bilangan berlimpah (abudant), bilangan sempurna (perfect) atau bilangan kurang (deficient).
+### Penjelasan Enum Classification
+Enum tersebut merupakan enum yang berisi klasifikasi ketetapan nilai untuk menentukan bahwa bilangan tersebut apakah merupakan bilangan berlimpah (abudant), bilangan sempurna (perfect) atau bilangan kurang (deficient).
 
 ### Fungsi classify
 ```Rust
@@ -79,8 +80,8 @@ pub fn classify(num: u64) -> Option<Classification> {
 3. Jika bilangan habis dibagi dengan nilai `i` maka nilai `i` merupakan sebuah faktor yang nantinya dimasukkan kedalam Vector `f`.
 4. Membuat variable `aliquot_sum` bertipe data `u64` yang mutable untuk menghitung jumlah dari faktor-faktor yang telah didapat.
 5. Membuat `for` untuk menjumlahkan setiap faktor yang didapat dari dalam Vector `f`.
-6. Karena fungsi ini untuk mengecek bilangan berdasarkan ketetapan nilai yang telah dibuat di dalam fungsi `Classification`, maka keluarannya adalah `Option<Classification>`.
-7. Terakhir kita masuk kedalam tahap pengecekan, ada 5 tahap pengecekan: 1. Pertama kita cek apakah bilangan tersebut bernilai 0 atau tidak, jika iya return `None` yang artinya dia tidak masuk kedalam klasifikasi yang telah ditentukan pada fungsi `Classification`, 2. Bila jumlah alikuot = bilangan, maka bilangan masuk ke dalam klasifikasi bilangan sempurna (perfect), 3. Bila jumlah alikuot > bilangan, maka bilangan masuk ke dalam klasifikasi bilangan berlimpah (abundant), 4. Bila jumlah alikuot < bilangan, maka bilangan masuk ke dalam klasifikasi bilangan kurang (deficient), 5. Selain dari keempat pengecekan tersebut, maka return `None`.
+6. Karena fungsi ini untuk mengecek bilangan berdasarkan ketetapan nilai yang telah dibuat di dalam enum `Classification`, maka keluarannya adalah `Option<Classification>`.
+7. Terakhir kita masuk kedalam tahap pengecekan, ada 5 tahap pengecekan: 1. Pertama kita cek apakah bilangan tersebut bernilai 0 atau tidak, jika iya return `None` yang artinya bilangan itu tidak masuk kedalam klasifikasi apapun yang telah ditentukan pada enum `Classification`, 2. Bila jumlah alikuot = bilangan, maka bilangan masuk ke dalam klasifikasi bilangan sempurna (perfect), 3. Bila jumlah alikuot > bilangan, maka bilangan masuk ke dalam klasifikasi bilangan berlimpah (abundant), 4. Bila jumlah alikuot < bilangan, maka bilangan masuk ke dalam klasifikasi bilangan kurang (deficient), 5. Selain dari keempat pengecekan tersebut, maka return `None`.
 
 ## Full Code
 ```Rust
