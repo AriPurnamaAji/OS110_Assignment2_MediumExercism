@@ -27,7 +27,9 @@ Dalam matematika, bilangan  sempurna adalah bilangan bulat positif yang merupaka
 Mulai dari situlah saya dapat memahami bagaimana saya mendapatkan faktor-faktor dari suatu bilangan tersebut. 
 
 ### Fungsi Classification
-```
+```Rust
+#[derive(Debug, PartialEq, Eq)]
+
 pub enum Classification {
     Abundant,
     Perfect,
@@ -39,7 +41,7 @@ pub enum Classification {
 Fungsi tersebut merupakan fungsi yang berisi klasifikasi ketetapan nilai untuk menentukan bahwa bilangan tersebut apakah merupakan bilangan berlimpah (abudant), bilangan sempurna (perfect) atau bilangan kurang (deficient).
 
 ### Fungsi classify
-```
+```Rust
 pub fn classify(num: u64) -> Option<Classification> {
     //unimplemented!("classify {}", num);
     let mut f:Vec<u64> = Vec::new();
@@ -81,7 +83,7 @@ pub fn classify(num: u64) -> Option<Classification> {
 7. Terakhir kita masuk kedalam tahap pengecekan, ada 5 tahap pengecekan: 1. Pertama kita cek apakah bilangan tersebut bernilai 0 atau tidak, jika iya return `None` yang artinya dia tidak masuk kedalam klasifikasi yang telah ditentukan pada fungsi `Classification`, 2. Bila jumlah alikuot = bilangan, maka bilangan masuk ke dalam klasifikasi bilangan sempurna (perfect), 3. Bila jumlah alikuot > bilangan, maka bilangan masuk ke dalam klasifikasi bilangan berlimpah (abundant), 4. Bila jumlah alikuot < bilangan, maka bilangan masuk ke dalam klasifikasi bilangan kurang (deficient), 5. Selain dari keempat pengecekan tersebut, maka return `None`.
 
 ## Full Code
-```
+```Rust
 #[derive(Debug, PartialEq, Eq)]
 
 pub enum Classification {
